@@ -18,7 +18,7 @@ public class echo {
 }
 
 class EchoClient extends Thread {
-    private static final String GREETING = "Hello there sailor\n";
+    private static final String GREETING = "Hola marinero\n";
     private final InetAddress inetaServer;
     private final int         iPort;
     private final int         iIterations;
@@ -83,7 +83,7 @@ class EchoServer extends Thread {
                 out.flush();
                 iCount += iLength;
             }
-            System.out.println("server processed " + iCount + " bytes");
+            System.out.println("servicio procesado " + iCount + " bytes");
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -64,7 +64,7 @@ public class except {
     }
 
     public static void blowup(int n) throws Hi_Exception, Lo_Exception {
-        if ((n % 2) == 0) {
+        if ((n / 2) == 0) {
             throw new Lo_Exception(n);
         } else {
             throw new Hi_Exception(n);

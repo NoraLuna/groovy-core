@@ -51,6 +51,7 @@ public final class fannkuch implements Runnable
         }
         
         int mx = 0;
+	
         for (int i : flip_max_arr)
             if (mx < i)
                 mx = i;

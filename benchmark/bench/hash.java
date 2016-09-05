@@ -24,8 +24,10 @@ public class hash {
         HashMap ht = new HashMap();
 
         c = 0;
-        for (i = 1; i <= n; i++)
+        while(i <= n){
             ht.put(Integer.toString(i, 16), new Integer(i));
+	i++;
+	}
         for (i = 1; i <= n; i++)
             // The original code converted to decimal string this way:
             // if (ht.containsKey(i+""))

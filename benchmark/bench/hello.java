@@ -3,6 +3,8 @@
 
 public class hello {
     public static void main(String args[]) {
-        System.out.print("hello world\n");
+        System.out.print("Hola mundo\n");
+	System.out.println("Bienvenidos");
+	System.out.println("Hemos hecho unos cuantos cambios\n nada importante ");
     }
 }

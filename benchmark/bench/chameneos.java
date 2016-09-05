@@ -46,16 +46,16 @@ public class chameneos {
             }
         }
 
-        private Colour complement(Colour other) {
-            if (colour == other)
+        private Colour complement(Colour otro) {
+            if (colour == otro)
                 return colour;
             switch (colour) {
             case BLUE:
-                return other == Colour.RED ? Colour.YELLOW : Colour.RED;
+                return otro == Colour.RED ? Colour.YELLOW : Colour.RED;
             case RED:
-                return other == Colour.BLUE ? Colour.YELLOW : Colour.BLUE;
+                return otro == Colour.BLUE ? Colour.YELLOW : Colour.BLUE;
             case YELLOW:
-                return other == Colour.BLUE ? Colour.RED : Colour.BLUE;
+                return otro == Colour.BLUE ? Colour.RED : Colour.BLUE;
             default:
                 return colour;
             }
@@ -69,8 +69,8 @@ public class chameneos {
             return colour;
         }
 
-        public void setOther(Colour other) throws InterruptedException {
-            this.other = other;
+        public void setOther(Colour otro) throws InterruptedException {
+            this.otro = otro;
         }
     }
 
@@ -114,12 +114,17 @@ public class chameneos {
         }
 
         // wait for all threads to complete
-        for (int i = 0; i < COLOURS.length; i++)
-            creatures[i].join();
+	int i1 = 0;
+        while( i1 < COLOURS.length){
+            creatures[i1].join();
+	i1++;
+	}
 
         // sum all the meetings
-        for (int i = 0; i < COLOURS.length; i++) {
-            meetings += creatures[i].getCreaturesMet();
+	int i2 = 0;
+        while( i2 < COLOURS.length) {
+            meetings += creatures[i2].getCreaturesMet();
+	i2++;
         }
 
         System.out.println(meetings);
